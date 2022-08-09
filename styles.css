@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --primary-font: "Karla", sans-serif;
+  --header-font: "DM Serif Display", serif;
+  --primary-color1: hsl(256, 26%, 20%);
+  --primary-color2: hsl(216, 30%, 68%);
+  --neutral-color1: hsl(270, 9%, 17%);
+  --neutral-color2: hsl(273, 4%, 51%);
+  --neutral-color3: hsl(0, 0%, 98%);
+  --debug-red: 1px solid red;
+  --debug-green: 1px solid green;
+  --debug-black: 1px solid black;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+/* General Styles */
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--neutral-color2);
+}
+
+/* ## The Container ## */
+.container {
+  border: var(--debug-red);
+  max-width: 1440px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 10px 0;
+  font-family: var(--primary-font);
+  background-image: url(images/bg-pattern-intro-left-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 1px 250px;
+}
+
+/* ## Header and Navigation Styling ## */
+header {
+  max-width: 70%;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 10px;
+}
+header h1 {
+  display: inline-block;
+  font-family: var(--header-font);
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2;
+  color: var(--neutral-color1);
+  cursor: pointer;
+}
+
+.container .navigation {
+  float: right;
+  display: flex;
+  gap: 40px;
+  margin-top: 0px;
+}
+
+.container .navigation ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.container nav .navigation li a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 5px 15px;
+}
+
+nav button {
+  padding: 7px 25px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid var(--neutral-color2);
+  color: var(--primary-color1);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out;
+}
+
+nav button:hover {
+  background-color: var(--primary-color1);
+  color: var(--neutral-color3);
+}
+
+/* ## Intro Section Styling ## */
+.intro-section {
+  position: relative;
+}
+.intro-section article {
+  background-color: var(--primary-color1);
+  color: var(--neutral-color3);
+  padding: 60px 0;
+  height: 400px;
+  background-image: url(images/bg-pattern-intro-left-desktop.svg),
+    url(images/bg-pattern-intro-right-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 170px, top right;
+}
+
+.intro-section div h2 {
+  font-family: var(--header-font);
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 20px;
+  padding-top: 60px;
+  border-top: 1px solid;
+  border-image: linear-gradient(
+    to right,
+    hsl(0, 0%, 98%) 30%,
+    rgba(0, 0, 0, 0) 30%
+  ); /* to right - at 50% transparent */
+  border-image-slice: 1;
+}
+.intro-section div p {
+  margin-bottom: 20px;
+}
+
+.intro-section div {
+  max-width: 340px;
+  width: 100%;
+  margin-left: 15%;
+}
+
+.intro-section div button {
+  padding: 10px 25px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid var(--neutral-color3);
+  color: var(--neutral-color3);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.intro-section div button:hover {
+  background-color: var(--neutral-color3);
+  color: var(--neutral-color1);
+}
+
+.intro-section img {
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  width: 400px;
+  z-index: 1;
+}
+
+/* ## Section 2 - How we work ## */
+
+section.how-we-work {
+  max-width: 70%;
+  width: 100%;
+  margin: auto;
+  margin-top: 250px;
+}
+
+section.how-we-work div h2 {
+  font-family: var(--header-font);
+  font-size: 4.5rem;
+  font-weight: 500;
+  margin-bottom: 70px;
+  padding-top: 40px;
+  border-top: 1px solid;
+  border-image: linear-gradient(
+    to right,
+    hsl(216, 30%, 68%) 30%,
+    rgba(0, 0, 0, 0) 30%
+  ); /* to right - at 50% transparent */
+  border-image-slice: 1;
+}
+
+section.how-we-work .mid-section-head {
+  display: flex;
+}
+
+section.how-we-work .mid-section {
+  display: flex;
+  gap: 50px;
+}
+
+section.how-we-work > div img {
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+section.how-we-work h3 {
+  font-family: var(--header-font);
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+section.how-we-work p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+div.more-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color1);
+  color: var(--neutral-color3);
+  height: 200px;
+  margin-top: 120px;
+  background-image: url(images/bg-pattern-how-we-work-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+div.more-info h3 {
+  font-size: 4rem;
+  width: 38%;
+  line-height: 1;
+  margin-left: 10%;
+}
+
+div.more-info button {
+  width: 150px;
+  padding: 10px 25px;
+  margin-right: 10%;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid var(--neutral-color3);
+  color: var(--neutral-color3);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out;
+}
+
+div.more-info button:hover {
+  background-color: var(--neutral-color3);
+  color: var(--neutral-color1);
+}
+
+/* ## FOOTER STYLING ## */
+footer {
+  width: 100%;
+  margin: 100px auto 0px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-color: var(--neutral-color3);
+  background-image: url(images/bg-pattern-footer-desktop.svg);
+  background-repeat: no-repeat;
+}
+
+.top-footer {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  border-bottom: 1px solid hsla(226, 30%, 68%, 0.5);
+}
+
+.top-footer div h4 {
+  font-family: var(--header-font);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--neutral-color1);
+  cursor: pointer;
+}
+
+.top-footer div a {
+  padding-left: 15px;
+}
+
+svg {
+  background-color: white;
+}
+
+svg path:hover {
+  fill: var(--neutral-color1);
+}
+
+footer nav {
+  width: 70%;
+  margin: auto;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+footer nav ul li {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--primary-color1);
+  padding-bottom: 15px;
+  text-transform: uppercase;
+}
+
+footer nav li:first-of-type {
+  padding-bottom: 25px;
+  color: var(--primary-color2);
+  font-weight: 600;
+}
+
+footer nav ul li a {
+  color: var(--primary-color1);
+}
